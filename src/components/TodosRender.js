@@ -25,7 +25,7 @@ const TodosRender = () => {
 
   return (
     <div className="todosRender">
-      <div>{todosRender}</div>
+      <div className='todos'>{todosRender}</div>
       <div><Filters /></div>
     </div>
   )

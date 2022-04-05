@@ -10,6 +10,11 @@ export const todoSlice = createSlice({
     },
 
     reducers: {
+        setInitialState: (state, action) => {
+            state.todos = action.payload.todos
+            state.filterMode = "all"
+            state.inputValue = ""
+        },
         addTodo: (state, action) => {
             state.todos.push(action.payload)
         },

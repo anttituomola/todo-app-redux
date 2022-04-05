@@ -12,6 +12,10 @@
   margin: 0.6em;
 }
 
+.todoItem {
+  border-bottom: 1px solid grey;
+}
+
 .done {
   text-decoration: line-through;
 }
@@ -33,4 +37,35 @@
 
 .hidden {
   display: none;
+}
+
+.selected {
+  border-bottom: 2px solid #000;
+}
+
+.filters > span {
+  cursor: pointer;
+}
+
+.button {
+  margin: 0.6em;
+  border: none;
+  background-color: lightcoral;
+  color: #000;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(155, 55, 55)
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 50%;
+  margin: 0 auto;
+  text-align: left;
 }

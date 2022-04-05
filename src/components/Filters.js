@@ -11,9 +11,9 @@ const Filters = () => {
     <div className='filterContainer'>
         <span className='left'>{itemsNotDoneLeft} left</span>
         <span className='filters'>
-            <span onClick={() => dispatch(todoActions.filterTodos("all"))}>All</span>
-            <span onClick={() => dispatch(todoActions.filterTodos("active"))}>Active</span>
-            <span onClick={() => dispatch(todoActions.filterTodos("completed"))}>Completed</span>
+            <span className={state.todos.filterMode === "all" ? "selected" : ""} onClick={() => dispatch(todoActions.filterTodos("all"))}>All</span>
+            <span className={state.todos.filterMode === "active" ? "selected" : ""} onClick={() => dispatch(todoActions.filterTodos("active"))}>Active</span>
+            <span className={state.todos.filterMode === "completed" ? "selected" : ""} onClick={() => dispatch(todoActions.filterTodos("completed"))}>Completed</span>
         </span>
     </div>
   )
