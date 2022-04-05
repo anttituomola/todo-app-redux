@@ -1,11 +1,13 @@
 import './App.css'
-import Counter from './components/Counter';
+import Input from './components/Input'
+import TodosRender from './components/TodosRender'
 
 function App() {
   return (
     <div className="App">
-      <h1>Redux Boilerplate</h1>
-      <Counter />
+      <h1>Todo App with Redux</h1>
+      <Input />
+      <TodosRender />
     </div>
   );
 }
