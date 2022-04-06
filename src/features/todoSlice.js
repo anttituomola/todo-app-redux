@@ -5,7 +5,6 @@ export const todoSlice = createSlice({
 
     initialState: {
         todos: [],
-        inputValue: "",
         filterMode: "all"
     },
 
@@ -13,7 +12,6 @@ export const todoSlice = createSlice({
         setInitialState: (state, action) => {
             state.todos = action.payload.todos
             state.filterMode = "all"
-            state.inputValue = ""
         },
         addTodo: (state, action) => {
             state.todos.push(action.payload)
@@ -29,12 +27,7 @@ export const todoSlice = createSlice({
                 return todo
             })
         },
-        setInputValue: (state, action) => {
-            state.inputValue = action.payload
-        },
-        clearInputValue: state => {
-            state.inputValue = ""
-        },
+   
         filterTodos: (state, action) => {
             state.filterMode = action.payload
         },

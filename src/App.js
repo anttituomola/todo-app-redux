@@ -7,7 +7,7 @@ const App = () => {
   fetchData()
   return (
     <div className="App">
-      <h1>Todo App with Redux</h1>
+      <h1>Todo App with Redux - NOW UPDATED!</h1>
       <Input />
       <TodosRender />
     </div>
