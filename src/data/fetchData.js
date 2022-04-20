@@ -5,8 +5,11 @@ const useFetchData = () => {
     return async (dispatch, getState) => {
         const data = await fetch("https://jsonplaceholder.typicode.com/users/1/todos")
         const todos = await data.json()
-        const initialTodos = todos.slice(0, 5)
-        console.log(initialTodos)
+
+        // Get randomly selected todos
+        const randomNumber = Math.floor(Math.random() * 15) + 1
+        const endNumber = randomNumber + 5
+        const initialTodos = todos.slice(randomNumber, endNumber)
         dispatch(todoActions.setInitialState({
             todos: initialTodos.map(todo => {
                 return {

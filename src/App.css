@@ -13,7 +13,13 @@
 }
 
 .todoItem {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
   border-bottom: 1px solid grey;
+  padding: 0.25em;
+  width: 100%;
+  gap: 0.5em;
 }
 
 .done {
@@ -54,6 +60,7 @@
   color: #000;
   border-radius: 5px;
   cursor: pointer;
+  justify-content: flex-end;
 }
 
 .button:hover {
