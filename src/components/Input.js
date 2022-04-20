@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { todoActions } from '../features/todoSlice'
 
-
 const Input = () => {
     const dispatch = useDispatch()
     const [inputValue, setInputValue] = useState("")
